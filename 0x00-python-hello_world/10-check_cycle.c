@@ -2,10 +2,9 @@
 
 /**
  * check_cycle - if a singly-linked list has cycle
- * @list: A singly-linked list.
+ * @list: linked list.
  *
- * Return: If there is no cycle - 0.
- *         If there is a cycle - 1.
+ * Return: 1 if there is cycle, 0 otherwise
  */
 int check_cycle(listint_t *list)
 {
