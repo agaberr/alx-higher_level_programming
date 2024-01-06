@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 def element_at(my_list, idx):
+
     """
     retrieves an element from a list like in C
     ...
@@ -15,7 +16,7 @@ def element_at(my_list, idx):
         element in idx, otherwise None
     """
 
-    if(idx >= len(my_list) or idx < 0):
+    if idx >= len(my_list) or idx < 0:
         return None
 
     return my_list[idx]
