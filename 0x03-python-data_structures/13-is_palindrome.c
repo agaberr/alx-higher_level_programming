@@ -29,7 +29,7 @@ int check_palindrome(listint_t **left, listint_t *right)
  */
 int is_palindrome(listint_t **head)
 {
-	if (!head || !(*head)
+	if (!head || !(*head))
 		return (1);
 
 	return (check_palindrome(head, *head));
