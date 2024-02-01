@@ -1,5 +1,9 @@
+#!/usr/bin/python3
+"""Unittest formaxInteger module"""
+
 import unittest
-from max_integer import max_integer
+max_integer = __import__('6-max_integer').max_integer
+
 
 class MaxInteger(unittest.TestCase):
     """Test max_integer func"""
