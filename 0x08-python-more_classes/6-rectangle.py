@@ -63,5 +63,5 @@ class Rectangle:
 
     def __del__(self):
         """constructor msg"""
-        Rectangle.no_rectangles -= 1
         print("Bye rectangle...")
+        Rectangle.no_rectangles -= 1
