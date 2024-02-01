@@ -17,15 +17,9 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError('text must be a string')
     else:
-        for char in text:
-            if char != ' ':
-                if char not in ('.', '?', ':'):
-                    print(char, end='')
-                else:
-                    print(char)
-                    print()
+        for delim in "?:.":
+            txt = (delim + "\n\n").join([index.strip(" ") for index in txt.split(delim)])
             
-
 if __name__ == '__main__':
         import doctest
         doctest.testfile("tests/5-text_indentation.txt")
