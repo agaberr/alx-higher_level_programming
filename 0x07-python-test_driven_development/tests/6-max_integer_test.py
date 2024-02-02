@@ -62,6 +62,12 @@ class TestMaxInteger(unittest.TestCase):
     def test_none(self):
         """list is None"""
         self.assertRaises(TypeError, max_integer, None)
+    
+    def test_max_at_beginning(self):
+        """max at the beginning of list"""
+        l = [8, 5, 1]
+        result = max_integer(l)
+        self.assertEqual(result, 8)
 
 if __name__ == '__main__':
     unittest.main()
