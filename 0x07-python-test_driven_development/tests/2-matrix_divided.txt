@@ -63,5 +63,5 @@ TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' an
 Traceback (most recent call last):
 TypeError: matrix_divided() missing 1 required positional argument: 'div'
 
->>> print(matrix_divided(matrixB, inf))
+>>> print(matrix_divided(matrixB, float('inf')))
 [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
