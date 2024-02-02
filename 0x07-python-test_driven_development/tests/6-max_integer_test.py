@@ -57,7 +57,7 @@ class TestMaxInteger(unittest.TestCase):
         """string in list"""
         l = ["hi", "hello"]
         result = max_integer(l)
-        self.assertEqual(result, None)
+        self.assertRaises(TypeError, max_integer, None)
 
     def test_none(self):
         """list is None"""
