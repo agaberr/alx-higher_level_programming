@@ -7,7 +7,6 @@ Module with the class MyList
 
 
 class MyList(list):
-
     """Class My list inherits from list"""
     pass
 
