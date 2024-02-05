@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 =============================
-Module with the method inherits_from
+Module with the class BaseGeometry
 =============================
 """
 
