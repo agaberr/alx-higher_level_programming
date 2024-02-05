@@ -5,6 +5,7 @@ Module with the method inherits_from
 =============================
 """
 
+
 class BaseGeometry():
     """class BaseGeometry"""
 
