@@ -1,6 +1,12 @@
+The ``1-my_list`` module
+======================
 
+Using ``MyList``
+-------------------
 
    >>> MyList = __import__('1-my_list').MyList
+
+
    >>> my_list = MyList()
    >>> isinstance(my_list, list)
    True
@@ -61,4 +67,3 @@
    >>> my_list.append(NULL)
    Traceback (most recent call last):
    NameError: name 'NULL' is not defined
-   
