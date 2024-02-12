@@ -6,7 +6,7 @@ Module with the class Rectangle
 """
 
 
-from modles.base import Base
+from .base import Base
 
 
 class Rectangle(Base):
@@ -17,7 +17,7 @@ class Rectangle(Base):
         Constructor for class rectangle
         """
 
-        super.__init__(id)
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
@@ -25,7 +25,9 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """width getter"""
+        """
+        width getter
+        """
         return self.__width
     
     @width.setter
@@ -35,28 +37,34 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """width getter"""
-        return self.height
+        """
+        height getter
+        """
+        return self.__height
     
     @height.setter
     def height(self, val):
-        self.height = val
+        self.__height = val
 
     @property
     def x(self):
-        """width getter"""
-        return self.x
+        """
+        x getter
+        """
+        return self.__x
     
     @x.setter
     def x(self, val):
-        self.x = val
+        self.__x = val
 
 
     @property
     def y(self):
-        """width getter"""
-        return self.y
+        """
+        y getter
+        """
+        return self.__y
     
     @y.setter
     def y(self, val):
-        self.y = val
+        self.__y = val
