@@ -101,3 +101,13 @@ class Rectangle(Base):
         """
 
         return self.__width * self.__height
+
+    def display(self):
+        """
+        display rectangle using #
+        """
+
+        for _ in range(self.__y):
+            print()
+        for _ in range(self.__height):
+            print("{}{}".format(" " * self.__x, "#" * self.__width))
