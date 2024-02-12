@@ -6,6 +6,7 @@ Module with the class Base
 """
 
 import json
+import csv
 
 
 class Base:
@@ -111,3 +112,15 @@ class Base:
             return (list_insts)
         except (IOError, TypeError):
             return []
+        
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        filename = cls.__name__ + '.csv'
+        with open(filename, mode='w', newline='') as file:
+            writer = csv.writer(file)
+            if cls.__name__ == 'Rectangle':
+                for obj in list_objs:
+                    writer.writerow([obj.id, obj.width, obj.height, obj.x, obj.y])
+            elif cls.__name__ == 'Square':
+                for obj in list_objs:
+                    writer.writerow([obj.id, obj.size, obj.x, obj.y])
