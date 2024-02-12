@@ -168,3 +168,16 @@ class Rectangle(Base):
 
                 else:
                     pass
+
+    def to_dictionary(self):
+        """
+        Return dictionary representation
+        """
+        d = {}
+
+        d['id'] = self.id
+        d['width'] = self.width
+        d['height'] = self.height
+        d['x'] = self.x
+        d['y'] = self.y
+        return d
