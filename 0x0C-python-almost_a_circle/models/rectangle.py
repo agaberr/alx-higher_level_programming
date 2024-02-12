@@ -119,32 +119,52 @@ class Rectangle(Base):
 
         return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id, self.__x, self.__y, self.__width, self.__height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         update values of each attribute
         """
 
-        try:
-            self.id = args[0]
-        except IndexError:
-            pass
+        if (len(args) > 0):
+            try:
+                self.id = args[0]
+            except IndexError:
+                pass
 
-        try:
-            self.width = args[1]
-        except IndexError:
-            pass
+            try:
+                self.width = args[1]
+            except IndexError:
+                pass
 
-        try:
-            self.height = args[2]
-        except IndexError:
-            pass
+            try:
+                self.height = args[2]
+            except IndexError:
+                pass
 
-        try:
-            self.x = args[3]
-        except IndexError:
-            pass
+            try:
+                self.x = args[3]
+            except IndexError:
+                pass
 
-        try:
-            self.y = args[4]
-        except IndexError:
-            pass
+            try:
+                self.y = args[4]
+            except IndexError:
+                pass
+        
+        else:
+            args_list = ["id", "width", "height", "x", "y"]
+    
+            for attributes in args_list:
+                if attributes in kwargs:
+                    if attributes == "id":
+                        self.id = kwargs[attributes]
+                    if attributes == "width":
+                        self.width = kwargs[attributes]
+                    if attributes == "height":
+                        self.height = kwargs[attributes]
+                    if attributes == "x":
+                        self.x = kwargs[attributes]
+                    if attributes == "y":
+                        self.y = kwargs[attributes]
+
+                else:
+                    pass
