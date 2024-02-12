@@ -118,3 +118,33 @@ class Rectangle(Base):
         """
 
         return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id, self.__x, self.__y, self.__width, self.__height)
+
+    def update(self, *args):
+        """
+        update values of each attribute
+        """
+
+        try:
+            self.id = args[0]
+        except IndexError:
+            pass
+
+        try:
+            self.width = args[1]
+        except IndexError:
+            pass
+
+        try:
+            self.height = args[2]
+        except IndexError:
+            pass
+
+        try:
+            self.x = args[3]
+        except IndexError:
+            pass
+
+        try:
+            self.y = args[4]
+        except IndexError:
+            pass
