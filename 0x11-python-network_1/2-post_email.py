@@ -11,7 +11,7 @@ if __name__ == '__main__':
     import sys
 
     url = sys.argv[1]
-    data = {'email' : sys.argv[2]}
+    data = {'email': sys.argv[2]}
 
     encoded_data = urllib.parse.urlencode(email).encode('ascii')
     request = urllib.request.Request(url, data=encoded_data, method='POST')
