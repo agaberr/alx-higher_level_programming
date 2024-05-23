@@ -1,24 +1,24 @@
 #!/usr/bin/node
 const request = require('request');
 
-url = process.argv[2];
-
-let filmsCount = 0;
+const url = process.argv[2];
+const wedgeAntillesId = '18';
 
 request(url, (error, response, body) => {
-    if (error) {
-        console.log(error);
-    } else {
+  if (error) {
+    console.log(error);
+  } else {
+    const films = JSON.parse(body).results;
+    let filmsCount = 0;
 
-        for (let movie of JSON.parse(body).results) {
-            for (let character in movie.characters) {
-                // console.log(character);
-                if (character === '18') {
-                    filmsCount++;
-                }
+    films.forEach(film => {
+      film.characters.forEach(characterUrl => {
+        if (characterUrl.includes(`/people/${wedgeAntillesId}/`)) {
+          filmsCount++;
         }
-        
-    }
+      });
+    });
+
     console.log(filmsCount);
-}
+  }
 });
